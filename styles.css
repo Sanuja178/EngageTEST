@@ -40,17 +40,20 @@ h1.title {
     color: #FF6347;  /* Tomato red */
 }
 
-.price {
+.price, .normal-price, .new-price {
     font-size: 1.6em;
     color: #28a745;  /* Green */
     font-weight: bold;
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
 .normal-price {
-    font-size: 1.2em;
-    color: #999;
     text-decoration: line-through;
+    color: #999;
+}
+
+.new-price {
+    color: #007BFF;  /* Blue for the discounted price */
 }
 
 .description {
@@ -90,6 +93,15 @@ h1.title {
     color: #0056b3;
 }
 
+.info-note {
+    margin-top: 20px;
+    font-size: 1.2em;
+    background: #fff3cd;
+    border-left: 6px solid #ffc107;
+    padding: 15px;
+    border-radius: 5px;
+}
+
 @media (max-width: 768px) {
     .container {
         width: 90%;
@@ -104,7 +116,7 @@ h1.title {
         font-size: 2.2em;
     }
 
-    .offer, .description, .price, .normal-price {
+    .offer, .description, .price, .normal-price, .new-price {
         font-size: 1.3em;
     }
 
