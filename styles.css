@@ -5,91 +5,112 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
 }
 
 .container {
-    width: 80%;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-h1 {
-    font-size: 2.5em;
-    color: #007BFF;
+.content {
     text-align: center;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.options {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-}
-
-.button {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.button:hover {
-    background-color: #0056b3;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
+    padding: 40px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
 }
 
-input {
-    padding: 10px;
+h1.title {
+    font-size: 2.8em;
+    color: #007BFF;
     margin-bottom: 15px;
-    font-size: 1em;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    font-weight: bold;
 }
 
-.submit-button {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.submit-button:hover {
-    background-color: #218838;
-}
-
-.buy-button {
-    background-color: #dc3545;
-    color: white;
-    padding: 15px 30px;
+.offer {
     font-size: 1.5em;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.buy-button:hover {
-    background-color: #c82333;
+    margin-bottom: 20px;
+    color: #FF6347;  /* Tomato red */
 }
 
 .price {
-    font-size: 1.5em;
-    color: green;
+    font-size: 1.6em;
+    color: #28a745;  /* Green */
     font-weight: bold;
+    margin: 15px 0;
+}
+
+.normal-price {
+    font-size: 1.2em;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.description {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+.buy-button {
+    background-color: #28a745;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #218838;
+}
+
+.cta {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.cta-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.cta-link:hover {
+    color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .content {
+        padding: 30px;
+    }
+
+    h1.title {
+        font-size: 2.2em;
+    }
+
+    .offer, .description, .price, .normal-price {
+        font-size: 1.3em;
+    }
+
+    .buy-button {
+        width: 100%;
+        padding: 12px;
+        font-size: 1.2em;
+    }
 }
