@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Request Information & Set a Reminder</h1>
+        <p>Fill out the form below, and we'll send you a reminder when it's time to service your car, with a special offer!</p>
+        
+        <form action="thank-you.html" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="car-model">Car Model:</label>
+            <input type="text" id="car-model" name="car-model" required>
+
+            <label for="last-service">Last Service Date:</label>
+            <input type="date" id="last-service" name="last-service" required>
+
+            <label>
+                <input type="checkbox" name="reminder" required>
+                I would like to receive a reminder email with a special offer when my car service is due.
+            </label>
+
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
