@@ -1,45 +1,137 @@
+/* General reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body and overall layout */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     padding: 20px;
 }
 
-.content {
-    text-align: center;
-    padding: 40px;
-    background: #fff;
+/* Container */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+/* Heading */
+h1 {
+    font-size: 3em;
+    color: #007BFF;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Button styles */
+.button {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.4em;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Options section for landing page */
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Button layout for Buy Now and Request Information */
+.options .button {
+    width: 180px;
+    text-align: center;
+}
+
+.options .button:first-child {
+    background-color: #28a745;  /* Green for Buy Now */
+}
+
+.options .button:first-child:hover {
+    background-color: #218838;
+}
+
+.options .button:last-child {
+    background-color: #ffc107;  /* Yellow for Request Information */
+}
+
+.options .button:last-child:hover {
+    background-color: #e0a800;
+}
+
+/* Form styling for Request Info and Buy Now pages */
+form {
+    display: flex;
+    flex-direction: column;
     margin-top: 20px;
 }
 
-h1.title {
-    font-size: 2.8em;
-    color: #007BFF;
+input {
+    padding: 10px;
     margin-bottom: 15px;
-    font-weight: bold;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-.offer {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    color: #FF6347;  /* Tomato red */
+.submit-button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.3em;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+.submit-button:hover {
+    background-color: #218838;
+}
+
+/* Info note on form submission page */
+.info-note {
+    margin-top: 20px;
+    font-size: 1.2em;
+    background: #fff3cd;
+    border-left: 6px solid #ffc107;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Price information styling for Buy Now page */
 .price, .normal-price, .new-price {
     font-size: 1.6em;
     color: #28a745;  /* Green */
@@ -56,73 +148,45 @@ h1.title {
     color: #007BFF;  /* Blue for the discounted price */
 }
 
-.description {
-    font-size: 1.2em;
-    margin-bottom: 25px;
-}
-
-.buy-button {
-    background-color: #28a745;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.3em;
-    text-align: center;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.buy-button:hover {
-    background-color: #218838;
-}
-
-.cta {
-    margin-top: 20px;
-    font-size: 1.2em;
-}
-
-.cta-link {
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.cta-link:hover {
-    color: #0056b3;
-}
-
-.info-note {
-    margin-top: 20px;
-    font-size: 1.2em;
-    background: #fff3cd;
-    border-left: 6px solid #ffc107;
-    padding: 15px;
-    border-radius: 5px;
-}
-
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
     .container {
         width: 90%;
         padding: 15px;
     }
 
-    .content {
-        padding: 30px;
-    }
-
-    h1.title {
+    h1 {
         font-size: 2.2em;
     }
 
-    .offer, .description, .price, .normal-price, .new-price {
-        font-size: 1.3em;
+    p {
+        font-size: 1.1em;
     }
 
-    .buy-button {
+    .options {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .options .button {
         width: 100%;
-        padding: 12px;
         font-size: 1.2em;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .submit-button {
+        width: 100%;
+        font-size: 1.2em;
+    }
+
+    .price, .normal-price, .new-price {
+        font-size: 1.3em;
     }
 }
